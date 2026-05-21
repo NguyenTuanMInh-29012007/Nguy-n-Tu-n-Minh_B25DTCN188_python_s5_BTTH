@@ -14,13 +14,17 @@ for i in range(1, numbers_employee + 1):
         print("Lỗi. Số ngày nhập không hợp lệ! ")
         continue
 
+    print(f"{name_employee}: ", end = "")
+    for i in range(days_work):
+        for j in range(1):
+            print("*", end="") 
+    print()
+
     if days_work >= 18:
-        print(f"{name_employee}: ", "*"*days_work)
         print("Làm việc chăm chỉ")
     elif days_work == 0:
         print("Nhân viên nghỉ toàn bộ tháng")
     elif days_work < 10:
-        print(f"{name_employee}: ", "*"*days_work)
         print("Làm việc ít")
     else:
         print("Làm việc bình thường")
